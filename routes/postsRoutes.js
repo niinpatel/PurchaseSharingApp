@@ -41,10 +41,7 @@ router.put('/edit/:id', (req, res) => {
         post.price = req.body.price || post.price;
         post.purchasedAt = req.body.purchasedAt || post.purchasedAt;
 
-        if(!req.body.title){
-            throw 'title is needed'
-        }
-        if(typeof(req.body.price) !== "number"){
+        if(typeof(post.price) !== "number"){
             throw 'price must be a number'
         }
 
