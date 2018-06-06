@@ -8,6 +8,15 @@ router.get('/', (req, res) => {
     })
 });
 
+
+router.get('/:id', (req, res) => {
+    Post.findById(req.params.id, (err, post) => {
+        if(err) res.send('404'); res.end();
+
+        res.send({post})  // display individual post
+    })
+});
+
 router.post('/add', (req, res) => {
     // data of the new post
     let post = new Post();

@@ -14,6 +14,9 @@ const postSchema = new Schema({
     },
     purchasedAt: {
         type:String
+    },
+    image: {
+        type: String // url of the image
     }
 
 });
