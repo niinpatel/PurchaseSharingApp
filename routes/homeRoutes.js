@@ -19,7 +19,7 @@ router.get('/login', (req, res) => {
 });
 
 router.post('login', (req, res) => {
-    // login route post method
+    // login route post method todo
 });
 
 router.get('/register', (req, res) => {
@@ -29,7 +29,7 @@ router.get('/register', (req, res) => {
 });
 
 router.post('/register', (req, res) => {
-    // register route post method
+    // register route post method todo
 });
 
 
