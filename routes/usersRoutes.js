@@ -9,3 +9,5 @@ router.get('/:username', (req, res) => {
         res.end()
     })
 });
+
+module.exports = router;

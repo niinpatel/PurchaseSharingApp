@@ -32,5 +32,6 @@ router.post('/register', (req, res) => {
     // register route post method todo
 });
 
+module.exports = router;
 
 
