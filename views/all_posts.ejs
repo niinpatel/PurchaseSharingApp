@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Post</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<h1>All Posts</h1>
+
+
+<ol>
+
+    <% posts.forEach((post) => { %>
+
+    <div>
+        <h1><%= post.id %></h1>
+        <button class="favorite" type="submit">Favorite <%= post.favorites.length %></button>
+        <script>
+            $('.like').click(function(){
+                $.post('/post/favorite', {'id' : "<%= post.id %>"});
+            });
+        </script>
+
+    </div>
+
+    <% }); %>
+
+
+</ol>
+
+
+
+
+
+<form action="/logout" method="post">
+    <input type="submit" value="logout <%= username %>">
+</form>
+</body>
+</html>

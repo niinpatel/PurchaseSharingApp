@@ -5,8 +5,10 @@ const bcrypt = require('bcrypt');
 const passport = require('passport')
 
 
-
 router.route('/login')
+    .get(async(req, res) => {
+        res.render('login')
+    })
     .post(async(req,res,next) => {
 
         passport.authenticate('local', {
@@ -39,6 +41,5 @@ router.route('/register')
 
         res.json(newUser)
     });
-
 
 module.exports = router;

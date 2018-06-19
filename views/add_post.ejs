@@ -7,15 +7,17 @@
 <body>
 <h1>Add New Post</h1>
 
-<form action="/public/postic/post/add" method="post">
+<form action="/post/add" method="post">
     <input type="text" name="title" placeholder="title"><br/>
     <input type="text" name="shop[name]" placeholder="shop name"><br/>
     <input type="text" name="shop[city]" placeholder="shop city"><br/>
     <input type="submit" value="submit">
 </form>
 
+
+<br/><a href="/post/all"><button>All posts</button></a><br/>
 <form action="/logout" method="post">
-    <input type="submit" value="logout">
+    <input type="submit" value="logout <%= username %>">
 </form>
 </body>
 </html>

@@ -22,6 +22,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
+    posts: [{type: ObjectID, ref: 'Post'}],
     profile_pic: String,
     followers: [{type: ObjectID, ref: 'User'}],
     following:[{type: ObjectID, ref: 'User'}],

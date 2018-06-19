@@ -4,6 +4,11 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.port || 3000;
 
+
+// set t
+// he view engine to ejs
+app.set('view engine', 'ejs');
+
 const flash = require('connect-flash');
 const session = require('express-session')
 const passport = require('passport')
@@ -55,7 +60,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', express.static('public'));
 
 app.use('/', homeRoutes);
-app.use('/post' , postRoutes);
+app.use('/post', postRoutes);
+
+
+
 
 app.listen(PORT, () => {
     console.log('Listening at ' + PORT)
