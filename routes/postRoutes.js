@@ -21,15 +21,19 @@ router.route('/add')
 });
 
 router.get('/all', async(req, res) => {
-    let all_posts = await Post.find({})
+    let all_posts = await Post.find({});
 
     res.render('all_posts', {posts: all_posts, username: req.user.username})
-})
+});
 
 
 router.post('/like', async(req, res) => {
     console.log(req.body)
-})
+});
+
+
+
+
 
 
 

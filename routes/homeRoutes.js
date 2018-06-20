@@ -29,6 +29,9 @@ router.route('/logout')
     })
 
 router.route('/register')
+    .get(async(req, res) => {
+        res.render('register.ejs')
+    })
     .post(async(req, res) => {
         let newUser = new User(req.body)
 
@@ -41,5 +44,6 @@ router.route('/register')
 
         res.json(newUser)
     });
+
 
 module.exports = router;
